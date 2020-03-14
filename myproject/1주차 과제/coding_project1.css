@@ -1,0 +1,43 @@
+.wrap {
+    width: 600px;
+    height: 865px;
+    margin: 10px auto 10px auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.product_photo {
+    width: 500px;
+    height: 300px;
+    margin: 20px auto;
+    background-image: url(https://post-phinf.pstatic.net/MjAxODAzMjhfMjI0/MDAxNTIyMjM4MjEyMzA2.-7xvw2_VjG05nh2Xm3Y1Iz-6KUED2v3t-M7X_JMNPqwg.l9pxILARMyJrJeqvSiuM2OGIIUw5oDVirWAEW1BO4nog.JPEG/23.jpg?type=w1200);
+    background-size: cover;
+    background-position: center;
+}
+
+.text_bold {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.subtitle {
+    font-size: 15px;
+    margin: 5px;
+    padding: auto;
+}
+
+.blank {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.order_bar {
+    width: 300px;
+    margin: 10px;
+}
+
+.order_button {
+    text-align: center;
+}
