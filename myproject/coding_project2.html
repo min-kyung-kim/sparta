@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Webpage-->
+    <title>2주차과제</title>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!--폰트-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="min.css">
+
+    <script type="text/javascript">
+        function order() {
+
+            let inputname = $('#order_name').val();
+            let inputcount = $('#order_count').val();
+            let inputaddress = $('#order_address').val();
+            let inputPhN = $('#order_PhN').val();
+
+            let name1 = inputname;
+            let name2 = inputcount;
+            let name3 = inputaddress;
+            let name4 = inputPhN;
+
+            if (name1 == '') {
+                alert('이름을 입력하세요');
+                $('#order_name').focus();
+            } 
+            else if (name2 == '') {
+                alert('수량을 입력하세요');
+                $('#order_count').focus();
+            } 
+            else if (name3 == '') {
+                alert('주소를 입력하세요');
+                $('#order_address').focus();
+            }
+            else if (name4 == '') {
+                alert('번호를 입력하세요');
+                $('#order_PhN').focus();
+            } 
+            else if (name4.indexOf('-') !=3 {
+                alert('번호 입력 형식은 000-0000-0000 입니다.');
+                $('#order_PhN').focus();
+            }
+            else if (name1 !='' && name2 !='' && name3 !='' && name4 !='') {
+                alert('주문이 완료되었습니다!')
+                $('#order_bar').append
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 전체 Layout 설정 -->
+        <div class="product_photo">
+        </div>
+
+        <!-- 상품제목 -->
+        <div>
+            <p><span class="product_title">코로나마스크</span><span>가격 : 1만원 / 개</span></p>
+        </div>
+
+        <div class="product_sub_title">
+            <h5 class="product_sub_title">상품명: 아무도 말 안거는 마스크 (ikea)</h5>
+            </p>
+            <p class="description"> KF94 마스크 구하기 너무 힘든 당신! 필터 마스크의 새로운 개념을 제시한 상품이 이케아에서 출시되었다. 사회적 필터 마스크, 사람들이 자체적으로 이
+                마스크를 쓴 사람을 약간은 무섭게 보아 다가가기 어렵게 끔 만드는 디자인이다. 사회적거리가 필요한 시기인 지금. 저에게 말을 걸지마세요!라는 의사를 외부에 강력히 표시하고 싶다면, 이
+                마스크를 추천한다.</p>
+        </div>
+
+        <!-- 주문하기 -->
+        <div>
+            <p class="blank">⠀ </p>
+        </div>
+
+        <div>
+            <p class="text_bold">주문하기</p>
+            <span></span>
+        </div>
+
+        <div class="order_bar">
+            <p>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">주문자 성함: </span>
+                    </div>
+                    <input type="text" class="form-control" id="order_name"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
+
+
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">수량: </label>
+                    </div>
+                    <select class="custom-select" id="order_count">
+                        <option selected>&lt;-- 수량을 선택하세요. --&gt;</option>
+                        <option value="1">1box</option>
+                        <option value="2">2box</option>
+                        <option value="3">3box</option>
+                    </select>
+                </div>
+
+
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">주소: </span>
+                        </div>
+                        <input type="text" class="form-control" id="order_address"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div>
+
+
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">전화번호: </span>
+                    </div>
+                    <input type="text" class="form-control" id="order_PhN"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
+            </p>
+        </div>
+        <!-- 주문완료 -->
+        <div class="order_button">
+            <button onclick="order()" type="button" class="btn btn-dark">주문하기</button>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
